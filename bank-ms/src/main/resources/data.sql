@@ -1,0 +1,2 @@
+INSERT INTO credit_card (id, number, security_code, expiration_date, card_holder_name, available_limit, balance) VALUES (1, '123456789', 456, '09/29', 'Cristhian Nunes Dias', 5000.0, 2500.0);
+INSERT INTO customer (id, birth, last_name, name, credit_card_id) VALUES (1, '1995-09-05', 'Dias', 'Cristhian', 1);

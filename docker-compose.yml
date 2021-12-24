@@ -39,25 +39,6 @@ services:
       KAFKA_BROKERCONNECT: "kafka1:19091"
     depends_on:
       - kafka1
-  
-  db:
-    image: mysql:latest
-    restart: always
-    environment:
-      MYSQL_DATABASE: 'payment'
-      MYSQL_USER: 'admin'
-      MYSQL_PASSWORD: 123456
-      MYSQL_ROOT_PASSWORD: 123456
-    ports:
-      - '3306:3306'
-    expose:
-      - '3306'
-    volumes:
-      - my-db:/var/lib/mysql
-
-volumes:
-  my-db:
-
 
 #Sobre o Zookeeper: https://dattell.com/data-architecture-blog/what-is-zookeeper-how-does-it-support-kafka/
 #Detalhes das variáveis de ambiente:

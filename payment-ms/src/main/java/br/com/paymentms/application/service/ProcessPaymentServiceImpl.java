@@ -27,7 +27,6 @@ public class ProcessPaymentServiceImpl implements ProcessPaymentService {
             log.info("Success: {}", mapper.writeValueAsString(creditCard));
         } catch (JsonProcessingException e) {
             log.error("An error occurred while deserializing. Sending to queue DLQ");
-
             producer.produceDLQ(payload, e);
         }
     }
